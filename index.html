@@ -410,11 +410,11 @@ canvas#stars{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45
           <div class="hs-lbl">подписчиков</div>
         </div>
         <div class="hs-cell">
-          <div class="hs-num" data-count="460" data-suffix="K">0</div>
-          <div class="hs-lbl">охват / мес</div>
+          <div class="hs-num" data-count="1.06" data-suffix=" млн">0 млн</div>
+          <div class="hs-lbl">охват рилсов / мес</div>
         </div>
         <div class="hs-cell">
-          <div class="hs-num" data-count="175" data-suffix="K">0</div>
+          <div class="hs-num" data-count="331" data-suffix="K">0</div>
           <div class="hs-lbl">топ-рилс</div>
         </div>
         <div class="hs-cell">
@@ -443,12 +443,12 @@ canvas#stars{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45
       <div class="ns-title">Снимок аккаунта</div>
       <div class="ns-grid">
         <div class="ns-item">
-          <div class="ns-num">33 рилса</div>
-          <div class="ns-lbl">за последние 30 дней. Среднее 13&nbsp;600 просмотров, медиана 5&nbsp;995, потолок 175&nbsp;024, дно 2&nbsp;352.</div>
+          <div class="ns-num">30 рилсов</div>
+          <div class="ns-lbl">за последние 30 дней. Среднее 35&nbsp;400 просмотров, медиана 17&nbsp;600, потолок 331&nbsp;000, дно 7&nbsp;800. Суммарный охват — около 1,06&nbsp;млн просмотров в месяц.</div>
         </div>
         <div class="ns-item">
-          <div class="ns-num">8,7%</div>
-          <div class="ns-lbl">Reach по медиане. При норме 20–30% для аккаунта 50–100К подписчиков.</div>
+          <div class="ns-num">25,7%</div>
+          <div class="ns-lbl">Reach по медиане — в норме (для аккаунта 50–100К подписчиков). Аудитория есть, охваты в порядке.</div>
         </div>
         <div class="ns-item">
           <div class="ns-num">0 хайлайтов</div>
@@ -506,18 +506,18 @@ canvas#stars{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45
     <p class="section-sub fade-in fade-in-d1">Цифры намеренно консервативные — заведомо реалистичные ориентиры, без обещаний «гарантируем результат». Главный принцип: даже минимальный сценарий окупает мои услуги и даёт сверхприбыль.</p>
 
     <div class="metrics-list fade-in fade-in-d2">
-      <div class="metric-row" data-now="6000" data-mid="9000" data-far="15000">
+      <div class="metric-row">
         <div class="metric-title">Reach рилсов (медиана)</div>
         <div class="metric-bar">
           <div class="mb-track">
-            <div class="mb-fill mb-now" style="width:40%"></div>
-            <div class="mb-fill mb-mid" style="width:60%"></div>
+            <div class="mb-fill mb-now" style="width:44%"></div>
+            <div class="mb-fill mb-mid" style="width:65%"></div>
             <div class="mb-fill mb-far" style="width:100%"></div>
           </div>
           <div class="metric-values">
-            <span class="mv now">6 000</span>
-            <span class="mv mid">9 000</span>
-            <span class="mv far">15 000</span>
+            <span class="mv now">17 600</span>
+            <span class="mv mid">26 000</span>
+            <span class="mv far">40 000</span>
           </div>
         </div>
       </div>
@@ -1057,14 +1057,14 @@ canvas#stars{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45
         </tr>
       </thead>
       <tbody>
-        <tr><td>Reach рилсов (мес)</td><td class="now">~460 000</td><td class="target">~920 000</td></tr>
+        <tr><td>Reach рилсов (мес)</td><td class="now">~1,06 млн</td><td class="target">~2 млн</td></tr>
         <tr><td>Продаж курса / мес</td><td class="now">оценка ~18</td><td class="target">75</td></tr>
         <tr><td>Оборот с IG / мес</td><td class="now">оценка ~70 000 ₽</td><td class="target">~800 000 ₽</td></tr>
       </tbody>
     </table>
 
     <div class="loses-argument fade-in fade-in-d3">
-      Главный аргумент здесь — <strong>у Вас уже сейчас почти полмиллиона просмотров рилсов в месяц</strong>. Это не вопрос «нужно больше охватов» — это вопрос <strong>что охваты не конвертятся в продажи курса</strong>, потому что между ними нет выстроенной воронки. Деньги уходят не потому что у Вас мало контента или мало аудитории — а потому что между «человек посмотрел рилс» и «человек купил курс» сейчас нет ни одного шага.
+      Главный аргумент здесь — <strong>у Вас уже сейчас больше миллиона просмотров рилсов в месяц</strong>. Охваты в норме (25,7% по медиане), аудитория качественная, контент работает. Это не вопрос «нужно больше охватов» — это вопрос <strong>что миллион просмотров не конвертится в продажи курса</strong>, потому что между ними нет выстроенной воронки. Деньги уходят не потому что у Вас мало контента или мало аудитории — а потому что между «человек посмотрел рилс» и «человек купил курс» сейчас нет ни одного шага.
     </div>
 
     <div class="payback fade-in fade-in-d3">
@@ -1349,7 +1349,9 @@ function animateCounter(el, target, duration, format, suffix, prefix){
     let cur = target * eased;
     let formatted;
     if(isFloat){
-      formatted = cur.toFixed(2).replace('.', ',');
+      // Для дробных: при target <=10 показываем 2 знака, иначе 1
+      const decimals = target < 10 ? 2 : 1;
+      formatted = cur.toFixed(decimals).replace('.', ',');
     } else {
       cur = Math.floor(cur);
       formatted = format === 'space' ? cur.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : cur.toString();
